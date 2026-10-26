@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>Tokage Proxy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Tokage Proxy ホーム">
+      <span class="brand-icon">T</span><span>tokage<span class="brand-light">proxy</span></span>
+    </a>
+    <div class="top-right"><span class="status-dot"></span><span>WEB GATEWAY</span><span class="version">v1.1.0</span></div>
+  </header>
+
+  <main class="hero">
+    <div class="pill"><span class="sparkle">✦</span> YOUR WEB, YOUR WAY</div>
+    <h1>Explore the web.<br><span>Without the clutter.</span></h1>
+    <p class="subtitle">開きたいページのURLを入力するだけ。<br class="mobile-break">シンプルで快適なウェブアクセス。</p>
+
+    <form id="proxy-form" class="url-form">
+      <div class="input-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </div>
+      <label class="sr-only" for="url-input">開きたいURL</label>
+      <input id="url-input" type="text" inputmode="url" placeholder="URLを入力（例：https://example.com）" autocomplete="url" required>
+      <button type="submit"><span>開く</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></button>
+    </form>
+    <p id="message" class="message" role="status">URLを入力して「開く」を押してください。</p>
+
+    <div class="quick-label">QUICK ACCESS <span>— よく使うサイト</span></div>
+    <div class="quick-grid">
+      <button class="quick-card" type="button" data-url="https://www.wikipedia.org/"><span class="quick-icon wiki">W</span><span><b>Wikipedia</b><small>知識を探す</small></span><span class="quick-arrow">↗</span></button>
+      <button class="quick-card" type="button" data-url="https://www.example.com/"><span class="quick-icon example">E</span><span><b>Example</b><small>接続テスト</small></span><span class="quick-arrow">↗</span></button>
+      <button class="quick-card" type="button" data-url="https://www.mozilla.org/"><span class="quick-icon moz">M</span><span><b>Mozilla</b><small>ウェブの情報</small></span><span class="quick-arrow">↗</span></button>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature"><span class="feature-symbol">↗</span><span><b>かんたん操作</b><small>URLを入れてすぐアクセス</small></span></div>
+      <div class="feature"><span class="feature-symbol">◇</span><span><b>すっきりした画面</b><small>スマホ・PCに対応</small></span></div>
+      <div class="feature"><span class="feature-symbol">⌁</span><span><b>プライバシー配慮</b><small>入力URLを保存しません</small></span></div>
+    </div>
+    <p class="disclaimer">一部のサイトは、ログイン・動画・JavaScript・サイト側の制限により正常に表示されない場合があります。<br>このサービスはアクセス制限や認証を回避するためのものではありません。</p>
+  </main>
+
+  <footer><span>© <span id="year"></span> TOKAGE PROXY</span><span>Built for a better web <span class="footer-star">✦</span></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
